@@ -12,43 +12,43 @@ const speakers = [
     id: 1,
     name: 'Mohd. Kashif',
     profession: 'Educator',
-    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop',
+    image: '/speakers/kashif.webp',
   },
   {
     id: 2,
     name: 'Akshay Chopra',
     profession: 'Entrepreneur (ex-Pilot)',
-    image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop',
+    image: '/speakers/akshay.webp',
   },
   {
     id: 3,
     name: 'Vineet Khatri',
     profession: 'Educator',
-    image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop',
+    image: '/speakers/vineet.webp',
   },
   {
     id: 4,
     name: 'Deepak Wadhwa',
     profession: 'Financial Advisor',
-    image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop',
+    image: '/speakers/deepak.webp',
   },
   {
     id: 5,
     name: 'Dr. Tarun Sharma',
-    profession: 'Research Professor',
-    image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&h=400&fit=crop',
+    profession: 'Research Professor, IIT Roorkee',
+    image: '/speakers/tarun.webp',
   },
   {
     id: 6,
     name: 'Anirudh Kulkarni',
     profession: 'Manager (R & D), BPCL',
-    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop',
+    image: '/speakers/anirudh.webp',
   },
   {
     id: 7,
     name: 'Rajneesh Puri',
     profession: 'Founder @AAKRITI DEVELOPMENT SOCIETY',
-    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop',
+    image: '/speakers/rajneesh.webp',
   },
 ]
 
@@ -119,7 +119,7 @@ function SpeakerCard({ speaker }: { speaker: typeof speakers[0] }) {
           src={speaker.image}
           alt={speaker.name}
           fill
-          className="object-cover transition-transform duration-700 group-hover/card:scale-110"
+          className="object-contain transition-transform duration-700 group-hover/card:scale-110"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/30 to-transparent" />
         {/* Red accent glow at bottom */}
@@ -248,7 +248,7 @@ export default function Speakers() {
 
       <div ref={ref} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Desktop Layout */}
-        <div className="hidden md:grid md:grid-cols-2 gap-8 items-center min-h-[650px]">
+        <div className="hidden lg:grid lg:grid-cols-2 gap-8 items-center min-h-[650px]">
           {/* Left Side - Text */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -378,7 +378,7 @@ export default function Speakers() {
         </div>
 
         {/* Mobile Layout */}
-        <div className="md:hidden flex flex-col items-center">
+        <div className="lg:hidden flex flex-col items-center">
           {/* Header */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}

@@ -49,62 +49,104 @@ export default function SponsorsPage() {
                         </p>
                     </motion.div>
 
-                    {/* Sponsors Grid */}
+                    {/* Sponsors Row 1 - 3 cards */}
                     <motion.div
                         initial={{ opacity: 0, y: 40 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
-                        className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20"
+                        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-12 mb-12 max-w-5xl mx-auto"
                     >
                         {/* Sponsor Card - Cafitea */}
                         <motion.div
                             whileHover={{ scale: 1.05, y: -10 }}
                             transition={{ type: "spring", stiffness: 300 }}
-                            className="group relative"
+                            className="group relative flex flex-col"
                         >
                             <div className="absolute inset-0 bg-gradient-to-br from-tedx-red/20 to-transparent rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                            <div className="relative bg-white rounded-2xl p-8 border border-gray-200 hover:border-tedx-red/50 transition-all duration-500 h-full flex flex-col items-center justify-center shadow-lg">
+                            <div className="relative bg-white rounded-2xl p-8 border border-gray-200 hover:border-tedx-red/50 transition-all duration-500 aspect-[4/3] flex items-center justify-center shadow-lg overflow-hidden">
                                 <img
                                     src="/sponsers/cafitea.webp"
                                     alt="Caffitea"
-                                    className="max-h-32 w-auto object-contain filter brightness-100 group-hover:brightness-110 transition-all duration-300"
+                                    className="max-h-28 w-auto object-contain filter brightness-100 group-hover:brightness-110 transition-all duration-300 scale-110"
                                 />
                             </div>
-                            <h3 className="text-center mt-4 text-lg font-semibold text-white group-hover:text-tedx-red transition-colors duration-300">Caffitea</h3>
+                            <h3 className="text-center mt-5 text-lg font-semibold text-white group-hover:text-tedx-red transition-colors duration-300">Caffitea</h3>
                         </motion.div>
 
                         {/* Sponsor Card - Mango */}
                         <motion.div
                             whileHover={{ scale: 1.05, y: -10 }}
                             transition={{ type: "spring", stiffness: 300 }}
-                            className="group relative"
+                            className="group relative flex flex-col"
                         >
                             <div className="absolute inset-0 bg-gradient-to-br from-tedx-red/20 to-transparent rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                            <div className="relative bg-white rounded-2xl p-8 border border-gray-200 hover:border-tedx-red/50 transition-all duration-500 h-full flex flex-col items-center justify-center shadow-lg">
+                            <div className="relative bg-white rounded-2xl p-8 border border-gray-200 hover:border-tedx-red/50 transition-all duration-500 aspect-[4/3] flex items-center justify-center shadow-lg overflow-hidden">
                                 <img
                                     src="/sponsers/mango.webp"
                                     alt="Mango Herbs"
-                                    className="max-h-32 w-auto object-contain filter brightness-100 group-hover:brightness-110 transition-all duration-300"
+                                    className="max-h-28 w-auto object-contain filter brightness-100 group-hover:brightness-110 transition-all duration-300 scale-110"
                                 />
                             </div>
-                            <h3 className="text-center mt-4 text-lg font-semibold text-white group-hover:text-tedx-red transition-colors duration-300">Mango Herbs</h3>
+                            <h3 className="text-center mt-5 text-lg font-semibold text-white group-hover:text-tedx-red transition-colors duration-300">Mango Herbs</h3>
                         </motion.div>
 
                         {/* Sponsor Card - Rhino */}
                         <motion.div
                             whileHover={{ scale: 1.05, y: -10 }}
                             transition={{ type: "spring", stiffness: 300 }}
-                            className="group relative"
+                            className="group relative flex flex-col sm:col-span-2 sm:mx-auto md:col-span-1 sm:w-[calc(50%-1rem)] md:w-full"
                         >
                             <div className="absolute inset-0 bg-gradient-to-br from-tedx-red/20 to-transparent rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                            <div className="relative bg-white rounded-2xl p-8 border border-gray-200 hover:border-tedx-red/50 transition-all duration-500 h-full flex flex-col items-center justify-center shadow-lg">
+                            <div className="relative bg-white rounded-2xl p-8 border border-gray-200 hover:border-tedx-red/50 transition-all duration-500 aspect-[4/3] flex items-center justify-center shadow-lg overflow-hidden">
                                 <img
                                     src="/sponsers/rhino.webp"
                                     alt="The Red Rhino"
-                                    className="max-h-32 w-auto object-contain filter brightness-100 group-hover:brightness-110 transition-all duration-300"
+                                    className="max-h-28 w-auto object-contain filter brightness-100 group-hover:brightness-110 transition-all duration-300"
                                 />
                             </div>
-                            <h3 className="text-center mt-4 text-lg font-semibold text-white group-hover:text-tedx-red transition-colors duration-300">The Red Rhino</h3>
+                            <h3 className="text-center mt-5 text-lg font-semibold text-white group-hover:text-tedx-red transition-colors duration-300">The Red Rhino</h3>
+                        </motion.div>
+                    </motion.div>
+
+                    {/* Sponsors Row 2 - 2 cards centered */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 40 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.3 }}
+                        className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-12 mb-20 max-w-[calc(66.666%+1rem)] mx-auto"
+                    >
+                        {/* Sponsor Card - Pahadi Craft */}
+                        <motion.div
+                            whileHover={{ scale: 1.05, y: -10 }}
+                            transition={{ type: "spring", stiffness: 300 }}
+                            className="group relative flex flex-col"
+                        >
+                            <div className="absolute inset-0 bg-gradient-to-br from-tedx-red/20 to-transparent rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                            <div className="relative bg-white rounded-2xl p-8 border border-gray-200 hover:border-tedx-red/50 transition-all duration-500 aspect-[4/3] flex items-center justify-center shadow-lg overflow-hidden">
+                                <img
+                                    src="/sponsers/PAHADI CRAFT.webp"
+                                    alt="Pahadi Craft"
+                                    className="max-h-28 w-auto object-contain filter brightness-100 group-hover:brightness-110 transition-all duration-300 scale-125"
+                                />
+                            </div>
+                            <h3 className="text-center mt-5 text-lg font-semibold text-white group-hover:text-tedx-red transition-colors duration-300">Pahadi Craft</h3>
+                        </motion.div>
+
+                        {/* Sponsor Card - Naturaltein */}
+                        <motion.div
+                            whileHover={{ scale: 1.05, y: -10 }}
+                            transition={{ type: "spring", stiffness: 300 }}
+                            className="group relative flex flex-col"
+                        >
+                            <div className="absolute inset-0 bg-gradient-to-br from-tedx-red/20 to-transparent rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                            <div className="relative bg-white rounded-2xl p-8 border border-gray-200 hover:border-tedx-red/50 transition-all duration-500 aspect-[4/3] flex items-center justify-center shadow-lg overflow-hidden">
+                                <img
+                                    src="/sponsers/naturaltein.webp"
+                                    alt="Naturaltein"
+                                    className="max-h-28 w-auto object-contain filter brightness-100 group-hover:brightness-110 transition-all duration-300 scale-110"
+                                />
+                            </div>
+                            <h3 className="text-center mt-5 text-lg font-semibold text-white group-hover:text-tedx-red transition-colors duration-300">Naturaltein</h3>
                         </motion.div>
                     </motion.div>
 
